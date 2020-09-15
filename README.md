@@ -11,4 +11,7 @@ npm install express
 express 官网 https://expressjs.com/
 
 
+npm install mysql
+
+
 
