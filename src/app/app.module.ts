@@ -9,7 +9,9 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input'
-import { NzButtonModule } from 'ng-zorro-antd/button'
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,24 +21,21 @@ import { zh_CN } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 
-import { LoginComponent, RegisterComponent, UserComponent } from './component';
-
+import { LoginComponent, RegisterComponent, UserComponent, DetailComponent } from './component';
+import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
 registerLocaleData(zh);
-const componentList = [AppComponent, LoginComponent, RegisterComponent, UserComponent];
+const componentList = [AppComponent, LoginComponent, RegisterComponent, UserComponent, DetailComponent];
 @NgModule({
   imports: [
+    DemoNgZorroAntdModule,
     BrowserModule,
     AppRoutingModule,
     IconsProviderModule,
-    NzLayoutModule,
-    NzMenuModule,
-    NzFormModule,
+   
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzInputModule,
     ReactiveFormsModule,
-    NzButtonModule
   ],
   declarations: [
     ...componentList,
