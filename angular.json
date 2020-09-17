@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "first-app": {
+    "angular-zorro": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/first-app",
+            "outputPath": "dist/angular-zorro",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,7 +25,12 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "src/styles.less"
@@ -66,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "first-app:build"
+            "browserTarget": "angular-zorro:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "first-app:build:production"
+              "browserTarget": "angular-zorro:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "first-app:build"
+            "browserTarget": "angular-zorro:build"
           }
         },
         "test": {
@@ -114,15 +119,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "first-app:serve"
+            "devServerTarget": "angular-zorro:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "first-app:serve:production"
+              "devServerTarget": "angular-zorro:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "first-app"
+    }
+  },
+  "defaultProject": "angular-zorro",
+  "cli": {
+    "analytics": "53e3eeb9-dcfa-4285-8aa6-e8bae7de0484"
+  }
 }

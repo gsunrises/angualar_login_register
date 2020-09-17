@@ -1,10 +1,7 @@
-<div class="container">
-  <div>
-    <input type="text" placeholder="用户名" [(ngModel)]="formData.username">
+<div class="app-container">
+  <div class="app-login">
+    <router-outlet></router-outlet>
   </div>
-  <div>
-    <input type="password" placeholder="密码" [(ngModel)]="formData.password">
-  </div>
-  <button (click)="loginRequest()">登录</button>
-  <button (click)="registerRequest()">注册</button>
 </div>
+
+<!-- <router-outlet></router-outlet> -->
