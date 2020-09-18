@@ -1,7 +1,9 @@
 <div class="dash-detail">
     <nz-layout class="detail-layout">
         <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-            <div class="logo"></div>
+            <div class="logo">
+                <nz-avatar (click)="changeBgColor()" [ngStyle]="{ 'background-color': color }" [nzText]="text" nzSize="large" style="vertical-align: middle;"></nz-avatar>
+            </div>
             <ul nz-menu nzTheme="dark" nzMode="inline">
                 <li nz-submenu nzTitle="User" nzIcon="user">
                     <ul>
@@ -37,7 +39,7 @@
                 </div> -->
                 <router-outlet></router-outlet>
             </nz-content>
-            <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+            <nz-footer>©gsunrises@163.com</nz-footer>
         </nz-layout>
     </nz-layout>
 </div>

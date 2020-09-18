@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
+const colorList = ['#f56a00', '#7265e6', '#ffbf00', '#00a2ae'];
 @Component({
     selector: 'nz-demo-layout-custom-trigger',
     templateUrl: './detail.component.html',
@@ -14,7 +15,15 @@ export class DetailComponent {
 
     }
     isCollapsed = false;
+    text: string = 'XU';
+    color: string = colorList[3];
     ngOnInIt() {
         this.router.navigateByUrl('/detail');
+
+    }
+
+    changeBgColor() {
+        let idx = Math.random() * 3 + 1;
+        this.color = colorList[idx];
     }
 }
