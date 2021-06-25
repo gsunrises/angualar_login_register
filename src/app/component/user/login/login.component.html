@@ -17,14 +17,12 @@
         <div nz-col [nzSpan]="12">
             没有账号？
             <a routerLink="/register">注册</a>
-            <!-- <label nz-checkbox formControlName="remember">
-          <span>Remember me</span>
-        </label> -->
         </div>
         <div nz-col [nzSpan]="12">
             <a class="login-form-forgot">忘记密码</a>
         </div>
     </div>
-    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">登录</button>
-
+    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">登录</button>  
 </form>
+
+<nz-switch [(ngModel)]="switchBoolean"></nz-switch>

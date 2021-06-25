@@ -5,14 +5,14 @@
                 <nz-avatar (click)="changeBgColor()" [ngStyle]="{ 'background-color': color }" [nzText]="text" nzSize="large" style="vertical-align: middle;"></nz-avatar>
             </div>
             <ul nz-menu nzTheme="dark" nzMode="inline">
-                <li nz-submenu nzTitle="User" nzIcon="user">
+                <li nz-submenu nzTitle="Information" nzIcon="user">
                     <ul>
-                        <li nz-menu-item>Tom</li>
+                        <li nz-menu-item routerLink="/register">Introduction</li>
                         <li nz-menu-item>Bill</li>
                         <li nz-menu-item>Alex</li>
                     </ul>
                 </li>
-                <li nz-submenu nzTitle="Team" nzIcon="team">
+                <li nz-submenu nzTitle="Education" nzIcon="team">
                     <ul>
                         <li nz-menu-item>Team 1</li>
                         <li nz-menu-item>Team 2</li>

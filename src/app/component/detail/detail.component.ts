@@ -23,7 +23,8 @@ export class DetailComponent {
     }
 
     changeBgColor() {
-        let idx = Math.random() * 3 + 1;
+        let idx = Math.ceil((Math.random() * 3)) + 1;
+        console.log(idx)
         this.color = colorList[idx];
     }
 }

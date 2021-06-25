@@ -42,6 +42,7 @@ export class LoginComponent {
     }
 
 
+    switchBoolean = true;
 
     ngOnInit(): void {
         this.validateForm = this.fb.group({
