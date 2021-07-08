@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent, RegisterComponent, UserComponent, DetailComponent } from './component';
+import { LoginComponent, RegisterComponent, UserComponent, DetailComponent, AppIntroduction } from './component';
 
 const routes: Routes = [
   // { path: '', pathMatch: 'full', redirectTo: '/user/login', },
@@ -15,9 +15,9 @@ const routes: Routes = [
   },
   {
     path: 'detail', component: DetailComponent,
-    // children: [
-    //   { path: 'dashboard', component: LoginComponent, data: { title: 'Dashboard', titleI18n: 'dashboard', } },
-    // ]
+    children: [
+      { path: 'introduction', component: AppIntroduction, data: { title: 'introduction', titleI18n: 'introduction', } },
+    ]
   },
 ];
 

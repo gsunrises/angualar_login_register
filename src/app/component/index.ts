@@ -7,3 +7,4 @@ export { UserComponent } from './user/user.component';
 
 export { DetailComponent } from './detail/detail.component';
 
+export { AppIntroduction } from './detail/introduction/introduction.component';
